@@ -1,0 +1,14 @@
+# Executa a cada tentativa de commit
+pre-commit:
+  commands:
+    check:
+      run: pnpm format {staged_files}
+      glob: '*.{js,jsx,ts,tsx,css,json,md}'
+      stage_fixed: true
+
+# Executa a cada tentativa de push
+pre-push:
+  commands:
+    validate:
+      glob: '*.{ts,tsx}'
+      run: pnpm validate:typecheck

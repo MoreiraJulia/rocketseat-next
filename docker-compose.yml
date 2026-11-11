@@ -1,11 +1,11 @@
 version: '3.8'
 
-services
-  postgres: 
+services:
+  postgres:
     image: postgres:17
     container_name: petshop-db
     restart: always
-    ports: 
+    ports:
       - '5432:5432'
     enviroment:
       POSTGRES_USER: docker
