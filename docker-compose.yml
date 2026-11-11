@@ -7,7 +7,7 @@ services:
     restart: always
     ports:
       - '5432:5432'
-    enviroment:
+    environment:
       POSTGRES_USER: docker
       POSTGRES_PASSWORD: docker
       POSTGRES_DB: petshop
